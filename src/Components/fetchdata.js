@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 function DataFetching(source) {
   const [loading, setLoading] = useState(true);
+  const [randomNumber, setRandomNumber] = useState(0);
   const [results, setResults] = useState([]);
   const [error, setError] = useState('');
 
@@ -24,12 +25,13 @@ function DataFetching(source) {
     }
 
     fetchData();
-  }, [source]);
+  }, [source, randomNumber]);
 
   return {
     error,
     loading,
     results,
+    setRandomNumber,
   };
 }
 
