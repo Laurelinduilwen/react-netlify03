@@ -6,6 +6,14 @@
   height: 40vmin;
 }
 
+.randomizer {
+  height: 2em;
+  width: 12em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(199, 33, 36);
+}
+
 h2 {
   color: white;
   font-size: 2em;

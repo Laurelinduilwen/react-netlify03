@@ -48,7 +48,11 @@ function Week03() {
         />
       </React.Fragment>
       <div>
-        <HyfButton name="Click to Randomize!" toggle={() => setRandomNumber(Math.random())} />
+        <HyfButton
+          className="randomizer"
+          name=">>Click to Generate!<<"
+          toggle={() => setRandomNumber(Math.random())}
+        />
       </div>
     </div>
   );
