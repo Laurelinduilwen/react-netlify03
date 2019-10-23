@@ -8,10 +8,10 @@ function Week03() {
   const maleURL = 'https://uinames.com/api/?ext&&gender=male';
   const femaleURL = 'https://uinames.com/api/?ext&&gender=female';
   const [URL, setURL] = useState(defaultURL);
-  const { loading, results, error, setRandomNumber } = DataFetching(URL);
+  const { loading: isLoadingUser, results: user, error, trigger } = DataFetching(URL);
 
-  if (loading || error) {
-    return loading ? 'Now Loading...' : error.message;
+  if (isLoadingUser || error) {
+    return isLoadingUser ? 'Now Loading...' : error.message;
   }
 
   const changeToRandom = () => {
@@ -30,7 +30,7 @@ function Week03() {
     <div className="Week03">
       <h2>Homework Week03</h2>
       <React.Fragment>
-        <ProfileCard props={results} />
+        <ProfileCard props={user} />
         <HyfButton
           className={URL === defaultURL ? 'active-button' : 'inactive-button'}
           name={`Random`}
@@ -48,11 +48,7 @@ function Week03() {
         />
       </React.Fragment>
       <div>
-        <HyfButton
-          className="randomizer"
-          name=">>Click to Generate!<<"
-          toggle={() => setRandomNumber(Math.random())}
-        />
+        <HyfButton className="randomizer" name=">>Click to Generate!<<" toggle={() => trigger()} />
       </div>
     </div>
   );

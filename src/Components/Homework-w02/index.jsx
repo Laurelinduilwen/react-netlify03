@@ -43,17 +43,19 @@ function Week02() {
   return (
     <div className="week02">
       <h2>Homework Week02</h2>
-      {toDoItems.map((todo, index) => (
-        <React.Fragment>
-          <Todo key={index} index={index} todo={todo} />
-          <HyfButton
-            name={todo.isComplete ? 'Mark Incomplete' : 'Mark Complete'}
-            toggle={() => toggleTodo(index)}
-          />
-          <HyfButton name="Remove Todo" toggle={() => removeTodo(index)} />
-        </React.Fragment>
-      ))}
-      <HyfInput addTodo={addTodo} />
+      <div className="info-wrapper">
+        {toDoItems.map((todo, index) => (
+          <React.Fragment>
+            <Todo key={index} index={index} todo={todo} />
+            <HyfButton
+              name={todo.isComplete ? 'Mark Incomplete' : 'Mark Complete'}
+              toggle={() => toggleTodo(index)}
+            />
+            <HyfButton name="Remove Todo" toggle={() => removeTodo(index)} />
+          </React.Fragment>
+        ))}
+        <HyfInput addTodo={addTodo} />
+      </div>
     </div>
   );
 }

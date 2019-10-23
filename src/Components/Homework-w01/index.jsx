@@ -44,7 +44,7 @@ class Week01 extends Component {
     return (
       <div className="week01">
         <h2>Homework Week01</h2>
-        <div className="todos-static">
+        <div className="info-wrapper">
           <h3>Static List:</h3>
           <ul className="TodoItemStatic">
             <TodoItem
@@ -65,7 +65,7 @@ class Week01 extends Component {
           </ul>
         </div>
 
-        <div className="todos-dynamic">
+        <div className="info-wrapper">
           <h3>Dynamic List</h3>
           <ul>{this.DynamicTodos()}</ul>
         </div>

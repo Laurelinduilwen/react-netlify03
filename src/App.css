@@ -6,18 +6,80 @@
   height: 40vmin;
 }
 
-.randomizer {
-  height: 2em;
-  width: 12em;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: rgb(199, 33, 36);
+.person {
+  margin: 0 0 -18vmin 0;
+  width: 75vmin;
+  height: auto;
+}
+
+h2.home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 5px black;
+  font-size: 3.3em;
 }
 
 h2 {
   color: white;
   font-size: 2em;
   text-shadow: 1px 1px 4px #09d3ac;
+  font-family: 'Orbitron', sans-serif;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  overflow: visible;
+  font-family: 'Orbitron', sans-serif;
+  color: beige;
+  margin: 0.8em 1em 0.8em 1em;
+}
+
+ul.nav-bar {
+  list-style-type: none;
+  margin: 0em;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.15em;
+  color: white;
+  border-bottom: 3px outset #524949;
+}
+
+.nav-bar li {
+  float: left;
+  border-right: 1px solid #bbb;
+  z-index: 5;
+}
+
+.nav-bar li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-bar li a:hover {
+  background-color: #09d3ac;
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+.nav-bar li:last-child {
+  border-left: 1px solid #bbb;
+  border-right: none;
+  text-align: inherit;
+  float: right
 }
 
 .todo-complete {
@@ -26,7 +88,7 @@ h2 {
 
 .name-surname {
   font-size: 150%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   text-shadow: 1px 1px 3px #09d3ac;
 }
@@ -50,12 +112,21 @@ h2 {
   box-shadow: 0px 0px 8px #09d3ac;
 }
 
+.randomizer {
+  height: 2em;
+  width: 12em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(199, 33, 36);
+}
+
 .info-wrapper {
   font-size: 75%;
   transition: transform 0.2s;
   box-sizing: border-box;
   border: 3px groove #333333;
   border-radius: 4px;
+  background-color: rgb(0, 0, 0, 0.7);
 }
 
 .info-wrapper:hover {
@@ -72,6 +143,7 @@ h2 {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow: hidden;
 }
 
 .App-link {

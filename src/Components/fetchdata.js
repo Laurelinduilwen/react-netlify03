@@ -27,11 +27,15 @@ function DataFetching(source) {
     fetchData();
   }, [source, randomNumber]);
 
+  const trigger = () => {
+    setRandomNumber(Math.random());
+  };
+
   return {
     error,
     loading,
     results,
-    setRandomNumber,
+    trigger,
   };
 }
 
